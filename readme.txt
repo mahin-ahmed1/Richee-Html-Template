@@ -1,3 +1,39 @@
+<script>
+        // Function to scroll the page
+    function scrollSmoothly(px) {
+        window.scrollTo({
+            top: window.scrollY + px,
+            behavior: 'smooth'
+        });
+    }
+	
+function isAtBottom(){
+	return window.innerHeight+window.scrollY >= document.body.offsetHeight;
+}
+        const scrollInterval = setInterval(()=> {
+			if(!isAtBottom()){
+				scrollSmoothly(1000);
+			}else{
+				clearInterval(scrollInterval)
+			}
+		},4000)
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 === richee ===
 
 Contributor: Mahin Ahmed
